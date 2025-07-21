@@ -2,8 +2,15 @@
 
 import streamlit as st
 from crud import procesar_pedido, registrar_feedback, calcular_metricas_diarias, generar_grafico_ingresos
-from database import SessionLocal
+from database import SessionLocal, crear_tablas
 import os
+
+# FORZAR creación de tablas
+try:
+    crear_tablas()
+    st.info("✅ Base de datos inicializada correctamente.")
+except Exception as e:
+    st.warning(f"⚠️ Error al crear tablas: {e}")
 
 st.set_page_config(page_title="CRM Pappy's Foods", layout="wide")
 st.title("🍗 CRM para Pollerías - Pappy’s Foods")
