@@ -5,11 +5,11 @@ from schema import PedidoInput, FeedbackInput
 from fastapi import Depends
 from database import SessionLocal
 from database import crear_tablas
+crear_tablas()
 from reporte_utils import calcular_metricas_diarias, generar_grafico_ingresos, generar_pdf_reporte
 import traceback
 # Crear la instancia de la aplicación FastAPI
 app = FastAPI(title="CRM para Pappy’s Foods - MYPE")
-crear_tablas()
 # Endpoint para procesar pedidos
 @app.post("/pedido/")
 def nuevo_pedido(pedido: PedidoInput):
