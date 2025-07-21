@@ -1,5 +1,5 @@
 streamlit
-sqalchemy
+sqlalchemy
 pydantic
 reportlab
 fastapi
