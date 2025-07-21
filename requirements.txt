@@ -1,3 +1,7 @@
+streamlit
+sqalchemy
+pydantic
+reportlab
 fastapi
 uvicorn
 pydantic
